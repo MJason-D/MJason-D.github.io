@@ -8,10 +8,10 @@
     :root {
       --bg: #f5f5f7;
       --card: #ffffff;
-      --accent: #1e293b;
-      --accent-soft: #e2e8f0;
-      --text-main: #0f172a;
-      --text-muted: #64748b;
+      --accent: #111827;
+      --accent-soft: #e5e7eb;
+      --text-main: #111827;
+      --text-muted: #6b7280;
     }
     * {
       box-sizing: border-box;
@@ -24,61 +24,93 @@
       color: var(--text-main);
       line-height: 1.5;
     }
+
+    /* HEADER */
     header {
-      background: var(--accent);
-      color: #fff;
-      padding: 24px 16px 32px;
+      background: #111827;
+      color: #ffffff;
+      padding: 28px 16px 32px;
       text-align: center;
     }
     header h1 {
-      font-size: 1.8rem;
-      margin-bottom: 8px;
+      font-size: 2rem;
+      margin-bottom: 6px;
     }
     header p {
       font-size: 0.95rem;
       color: #e5e7eb;
+      max-width: 520px;
+      margin: 0 auto;
     }
+
+    .hero-tags {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 6px;
+      margin-top: 10px;
+    }
+    .hero-tag {
+      font-size: 0.75rem;
+      padding: 4px 10px;
+      border-radius: 999px;
+      background: rgba(31, 41, 55, 0.35);
+      border: 1px solid rgba(156, 163, 175, 0.7);
+      color: #e5e7eb;
+    }
+
+    /* LAYOUT */
     .container {
       max-width: 900px;
-      margin: -24px auto 40px;
+      margin: -18px auto 40px;
       padding: 0 16px;
     }
     .card {
       background: var(--card);
-      border-radius: 14px;
+      border-radius: 12px;
       padding: 16px 18px;
       margin-bottom: 16px;
-      box-shadow: 0 8px 20px rgba(15, 23, 42, 0.06);
+      box-shadow: 0 6px 16px rgba(15, 23, 42, 0.06);
       border: 1px solid #e5e7eb;
     }
+
+    /* TEXT */
     h2 {
-      font-size: 1.2rem;
+      font-size: 1.15rem;
       margin-bottom: 10px;
       color: var(--accent);
     }
     h3 {
-      font-size: 1rem;
-      margin-bottom: 4px;
+      font-size: 0.98rem;
+      margin-bottom: 2px;
     }
     .sub {
       font-size: 0.85rem;
       color: var(--text-muted);
       margin-bottom: 6px;
     }
-    ul {
-      margin-left: 18px;
-      margin-top: 6px;
-      font-size: 0.9rem;
-    }
     p {
       font-size: 0.9rem;
-      margin-bottom: 4px;
+      margin-bottom: 6px;
     }
+    .section-title {
+      margin: 14px 0 2px;
+      font-size: 0.98rem;
+      font-weight: 600;
+      color: var(--accent);
+    }
+
+    ul {
+      margin-left: 18px;
+      margin-top: 2px;
+      font-size: 0.9rem;
+    }
+
     .tag-row {
       display: flex;
       flex-wrap: wrap;
       gap: 6px;
-      margin-top: 6px;
+      margin-top: 8px;
     }
     .tag {
       font-size: 0.75rem;
@@ -87,12 +119,7 @@
       background: var(--accent-soft);
       color: var(--text-muted);
     }
-    .section-title {
-      margin: 20px 0 8px;
-      font-size: 1.05rem;
-      font-weight: 600;
-      color: var(--accent);
-    }
+
     a {
       color: #2563eb;
       text-decoration: none;
@@ -100,13 +127,25 @@
     a:hover {
       text-decoration: underline;
     }
-    @media (min-width: 768px) {
-      header h1 {
-        font-size: 2.1rem;
-      }
-      .card {
-        padding: 20px 22px;
-      }
+
+    .link-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 8px;
+    }
+    .btn-link {
+      font-size: 0.85rem;
+      padding: 6px 12px;
+      border-radius: 999px;
+      border: 1px solid #cbd5f5;
+      background: #e5edff;
+      color: #1e293b;
+      text-decoration: none;
+      display: inline-block;
+    }
+    .btn-link:hover {
+      background: #dbeafe;
     }
   </style>
 </head>
@@ -114,7 +153,18 @@
 
 <header>
   <h1>Mari Jason Dulay</h1>
-  <p>Supply Chain & Procurement | Aeronautical Engineer | Freelance Logistics & Sourcing</p>
+  <p>
+    Supply Chain & Procurement professional with experience in strategic buying,
+    logistics coordination, and candidate sourcing — bringing an engineering
+    background into operations and day-to-day problem solving.
+  </p>
+  <div class="hero-tags">
+    <span class="hero-tag">Supply Chain</span>
+    <span class="hero-tag">Procurement</span>
+    <span class="hero-tag">Logistics Coordinator</span>
+    <span class="hero-tag">Strategic Buyer</span>
+    <span class="hero-tag">Candidate Sourcing</span>
+  </div>
 </header>
 
 <div class="container">
@@ -123,80 +173,87 @@
   <div class="card">
     <h2>About Me</h2>
     <p>
-      I am a Supply Chain and Procurement professional with experience across IT, Manufacturing, Retail,
-      Real Estate, and 3PL. I combine analytical thinking, sourcing skills, and engineering background as
-      a licensed Aeronautical Engineer to improve processes, support stakeholders, and deliver value.
+      I like working in roles where things actually move — supplies, trucks, parts, and people.
+      Most of my experience is in supply chain and procurement, but I also picked up candidate
+      sourcing along the way.
     </p>
-    <div class="tag-row">
-      <span class="tag">Supply Chain</span>
-      <span class="tag">Procurement</span>
-      <span class="tag">Strategic Sourcing</span>
-      <span class="tag">Data-Driven</span>
-      <span class="tag">Freelance</span>
-    </div>
+    <p>
+      I studied Aeronautical Engineering and passed the board. That engineering background
+      helps me think in a structured way, read data, and fix small problems before they turn
+      into big ones.
+    </p>
   </div>
 
-  <!-- FREELANCE EXPERIENCE -->
+  <!-- CURRENT ROLES -->
   <div class="card">
-    <h2>Current Freelance Roles</h2>
+    <h2>Current Roles</h2>
 
-    <div style="margin-bottom:10px;">
-      <h3>Logistics Coordinator (Freelance)</h3>
-      <p class="sub">Nov 2025 – Present · Remote / Project-Based</p>
+    <div style="margin-bottom: 10px;">
+      <h3>Logistics Coordinator</h3>
+      <p class="sub">Nov 2025 – Present</p>
       <ul>
-        <li>Supports logistics coordination and basic supply chain operations on a freelance basis.</li>
-        <li>Helps organize shipments, follow-ups, and documentation for clients.</li>
+        <li>Does truck builder work as part of logistics (deciding which orders go on which truck).</li>
+        <li>Helps with simple route planning and making sure loads make sense and are complete.</li>
+        <li>Updates basic records so movements are tracked and easy to follow.</li>
       </ul>
     </div>
 
     <div>
-      <h3>Sourcing Associate (Freelance)</h3>
-      <p class="sub">Dec 2025 – Present · Remote / Project-Based</p>
+      <h3>Sourcing Associate</h3>
+      <p class="sub">Dec 2025 – Present</p>
       <ul>
-        <li>Provides sourcing support such as supplier research, price comparisons, and RFQ assistance.</li>
-        <li>Helps clients identify cost-effective options while meeting quality and delivery requirements.</li>
+        <li>Searches for candidates based on a set of requirements or a simple brief.</li>
+        <li>Builds shortlists and keeps track of who might be a good fit for specific roles.</li>
+        <li>Does basic profile checks and passes them on for next steps.</li>
       </ul>
     </div>
   </div>
 
-  <!-- CORPORATE EXPERIENCE -->
+  <!-- WORK EXPERIENCE -->
   <div class="card">
     <h2>Work Experience</h2>
 
+    <!-- CBRE FIRST -->
     <div class="section-title">Procurement Analyst (Buyer) – CBRE</div>
-    <p class="sub">Mandaluyong · Sep 2025 – Jan 2026</p>
+    <p class="sub">Mandaluyong · Current</p>
     <ul>
-      <li>Handled procurement activities for six client sites covering housekeeping, pest control, mailroom, and security.</li>
-      <li>Supported contract management and supplier coordination for facilities services.</li>
+      <li>Handles purchasing for services like housekeeping, pest control, mailroom, and security for several sites.</li>
+      <li>Coordinates with suppliers and internal teams so services continue smoothly.</li>
+      <li>Helps with basic documentation and follow-ups for orders and contracts.</li>
     </ul>
 
+    <!-- KITCHEN WAREHOUSE SECOND -->
     <div class="section-title">Buyer’s Assistant – Kitchen Warehouse Australia / SuiteStudio</div>
-    <p class="sub">Pasig · Apr 2025 – Sep 2025</p>
+    <p class="sub">Pasig · 2025</p>
     <ul>
-      <li>Supported buying activities for Tabletop, Drinkware, Hydration, and Lunch categories.</li>
-      <li>Assisted with product sourcing, price checks, and supplier communication.</li>
+      <li>Supported the buying team for Tabletop, Drinkware, Hydration, and Lunch categories.</li>
+      <li>Helped check product details, prices, and simple comparisons between options.</li>
+      <li>Assisted with supplier emails and keeping information organised.</li>
     </ul>
 
-    <div class="section-title">Tech, Supply Chain Management – Collins Aerospace</div>
-    <p class="sub">Tanauan, Batangas · Jan 2024 – Feb 2025</p>
+    <!-- COLLINS THIRD -->
+    <div class="section-title">Strategic Buyer – Collins Aerospace</div>
+    <p class="sub">Tanauan, Batangas · 2024 – 2025</p>
     <ul>
-      <li>Supported Galleys Strategic Sourcing for electrical commodities.</li>
-      <li>Assisted in the manual integration and verification of 2,000+ parts into SAP.</li>
-      <li>Purchased electrical materials and components in line with cost, quality, and delivery targets.</li>
+      <li>Worked on buying electrical parts for Galleys products.</li>
+      <li>Helped keep data in SAP accurate for thousands of parts and suppliers.</li>
+      <li>Coordinated with different teams so parts, cost, and lead times matched what was needed.</li>
     </ul>
 
+    <!-- TERABIT FOURTH -->
     <div class="section-title">Purchasing Associate – Terabit Computer Systems Corporation</div>
-    <p class="sub">Makati · Jul 2024 – Sep 2024</p>
+    <p class="sub">Makati · 2024</p>
     <ul>
-      <li>Won bids for multiple government and private projects through competitive sourcing.</li>
-      <li>Prepared quotations, sourced new suppliers, and monitored purchase orders and deliveries.</li>
+      <li>Sourced IT products and helped prepare quotations for projects.</li>
+      <li>Followed up on orders and deliveries so timelines were clear.</li>
     </ul>
 
-    <div class="section-title">Maintenance Planning Engineer (OJT) – PSI AIR 2007 Inc.</div>
-    <p class="sub">Clark Freeport, Pampanga · Mar 2022 – Aug 2022</p>
+    <!-- PSI LAST -->
+    <div class="section-title">Maintenance Planning Intern – PSI AIR 2007 Inc.</div>
+    <p class="sub">Clark Freeport, Pampanga · 2022</p>
     <ul>
-      <li>Assisted with maintenance checks, planning, and aircraft utilization data (flight hours & cycles).</li>
-      <li>Performed LDND (Last Done Next Due) monitoring and helped prepare B727-200 task cards.</li>
+      <li>Helped track aircraft flight hours and cycles for maintenance planning.</li>
+      <li>Assisted with basic documents and checklists for scheduled work.</li>
     </ul>
   </div>
 
@@ -205,25 +262,27 @@
     <h2>Education</h2>
     <h3>BS Aeronautical Engineering</h3>
     <p class="sub">WCC Aeronautical and Technological College – Binalonan · 2019 – 2023</p>
-    <p>Dean’s Lister multiple semesters during 2019–2023.</p>
+    <p>
+      Finished Aeronautical Engineering with several semesters on the Dean’s List.
+    </p>
   </div>
 
-  <!-- LICENSES & CERTIFICATIONS -->
+  <!-- LICENSES -->
   <div class="card">
     <h2>Licenses & Certifications</h2>
     <ul>
-      <li>Aeronautical Engineer – PRC (Feb 2024)</li>
-      <li>Certified Safety Officer (BOSH SO1) – May 2024</li>
+      <li>Licensed Aeronautical Engineer – PRC</li>
+      <li>Certified Safety Officer (BOSH SO1)</li>
     </ul>
   </div>
 
   <!-- SKILLS -->
   <div class="card">
     <h2>Skills & Tools</h2>
-    <p><strong>Engineering:</strong> AutoCAD, Catia, PLM, Siemens NX, SolidWorks, Teamcenter</p>
-    <p><strong>Graphic Design:</strong> Adobe Photoshop, Adobe Premiere</p>
-    <p><strong>Productivity:</strong> Excel, PowerPoint, Word, Power BI, Adobe Acrobat</p>
+    <p><strong>Engineering / Design:</strong> AutoCAD, Catia, PLM, Siemens NX, SolidWorks, Teamcenter</p>
+    <p><strong>Office & Data:</strong> Excel, PowerPoint, Word, Power BI, Adobe Acrobat</p>
     <p><strong>Systems / ERP:</strong> CRM, JDE, SAP, NetSuite, Pricezag, PriSync, Magento, Lokad, Coupa</p>
+    <p><strong>Other:</strong> Adobe Photoshop, Adobe Premiere</p>
   </div>
 
   <!-- CONTACT -->
@@ -232,6 +291,10 @@
     <p>Email: <a href="mailto:marisantillandulay@gmail.com">marisantillandulay@gmail.com</a></p>
     <p>GitHub: <a href="https://github.com/MJason-D" target="_blank">github.com/MJason-D</a></p>
     <p>LinkedIn: <a href="https://www.linkedin.com/in/marijasondulay" target="_blank">linkedin.com/in/marijasondulay</a></p>
+    <div class="link-row">
+      <a class="btn-link" href="mailto:marisantillandulay@gmail.com">Email Me</a>
+      <a class="btn-link" href="https://www.linkedin.com/in/marijasondulay" target="_blank">View LinkedIn</a>
+    </div>
   </div>
 
 </div>
